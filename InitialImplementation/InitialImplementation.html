@@ -6,19 +6,27 @@
     <title>Interactive Sketchbook</title>
 </head>
 <body>
-    <h2>micro ideas</h2> 
+    <h2>Initial Implementation</h2> 
 
-    <h2>1. Confusion</h2>
-    <h3>The input is the question marks that show up on the screen when the mouse is moved around, and the change over time is the mouse moving.</h3>
-    <h3>The unevenness appears after the mouse is clicked, making the question marks disappear as the mouse is clicked.</h3>
+    <h2>Concept Summary</h2>
+    <h3>The interation is the progress bar moving up and down. The user is controlling how fast the bars move, with a slight buffer in between so they can't be pressed without a cooldown in between. The length of the proress bars change over time, as we as the color, changing from red to green as the user interacts with the website.</h3>
+    <!-- <h3>The unevenness appears after the mouse is clicked, making the question marks disappear as the mouse is clicked.</h3> -->
    
-    <h2>2. Growth</h2>
-    <h3>The input is the growth of the solid as the mouse is clicked, and the change over time are the two bars growing with the background as the mouse is clicked.</h3>
-    <br><h3>The unevenness would appear because every other mouse click makes each bar grow, making them uneven amounts until the set limit is met.</h3></br>
+    <h2>Primary Variable</h2>
+    <h3>let battery = 0</h3>
+    <br>The thing that changes the variable is the keyboard press by the user. and the variable controls the progress and length of the growing bar being controlled by the user's interaction on the website.
     
-    <h2>3. Waiting</h2>
-    <h3>The input is the count down in words "3... 2... 1..." before the bars change when the mouse is clicked. The change over time is the countdown popping up and disappearing after the bars move.</h3>
-    <h3>The unevenness begins when the bars change color as the mouse is clicked, even if it's only clicked once. for example, the bar would begin red and change to green when the mouse is clicked.</h3>
+    <h2>Base Build</h2>
+    <h3>One Variable: let battery = 0</h3>
+    <h3>One Input: up arrow key press</h3>
+    <h3>State 1: Bar is red and isn't on screen.</h3>
+    <h3>State 2: Bar changes green and length grows to fit canvas size as up arrow is pushed.</h3>
+
+    <h2>Structural Growth</h2>
+    <h3>In the next 3 weeks, I plan on building a small sketch, sort of like my own video game. Similar to the bars growing in a previous demo, I want to code the color changing from red to green as the bar progresses, instead of staying one color. I also want it to be sort of a race between multiple bars, controlled with the up and down arrow keys.</h3>
+    <br>I would want the sketch to have a 3... 2... 1... go! countdown so the user knows what's happening, with instructions that pop up before the game actually starts. I also want to control the text instructions with the arrow keys, specifying to click left if they need more of an explanation, or right to start the game before the countdown. 
+    
+
     
 
 </body>

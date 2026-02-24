@@ -2,7 +2,7 @@ let images = [];
 let currentIndex = 0;
 
 function preload(){
-  images[0] = loadImage ("../sketch-08/img/image1.jpeg");
+  images[0] = loadImage ("../number8/image1.jpeg");
   images[1] = loadImage ("../img/image2.jpeg");
   images[2] = loadImage ("../img/image3.jpeg");
   images[3] = loadImage ("../img/image4.jpeg");
