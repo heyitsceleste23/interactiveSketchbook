@@ -21,7 +21,6 @@ function draw() {
       fill(180, 80, 80);   // red
     }
 
-    // Corrected map() — must have 5 parameters
     let h = map(effort[i], 0, maxEffort, 0, height - 60);
 
     rect(i * barWidth + 40, height - h - 30, barWidth - 80, h);
@@ -36,16 +35,6 @@ function draw() {
   }
 
   text("same input, different outcomes", 10, height - 10);
-
-//    if (steps >= maxSteps) {
-//     fill(255);
-//     textSize(16);
-//     text("State Complete", width - 360, height - 100);
-//   } else {
-//     fill("#FF0000");
-//     textSize(18);
-//     text("State: incomplete", width - 150, height - 20);
-//   }
 }
 
 function mousePressed() {

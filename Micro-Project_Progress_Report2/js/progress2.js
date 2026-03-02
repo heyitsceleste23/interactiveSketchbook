@@ -1,6 +1,6 @@
 let effort = [0, 0];
 let privileged = [true, false];
-let maxEffort = 22;
+let maxEffort = 15;
 
 function setup() {
   createCanvas(600, 200);
@@ -14,14 +14,12 @@ function draw() {
 
   for (let i = 0; i < 2; i++) {
 
-    // Set color based on privilege
     if (privileged[i]) {
-      fill(60, 160, 80);   // green
+      fill(180, 80, 80);   
     } else {
-      fill(180, 80, 80);   // red
+      fill(60, 160, 80);   
     }
 
-    // Corrected map() — must have 5 parameters
     let h = map(effort[i], 0, maxEffort, 0, height - 60);
 
     rect(i * barWidth + 40, height - h - 30, barWidth - 80, h);
@@ -54,7 +52,6 @@ function mousePressed() {
       if (privileged[i]) {
         effort[i] = effort[i] + 1;
       } else {
-        // Fixed random() syntax
         if (random() < 0.4) {
           effort[i] = effort[i] + 1;
         }
