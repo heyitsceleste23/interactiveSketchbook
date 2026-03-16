@@ -1,4 +1,3 @@
-// ELEMENTS
 const block = document.getElementById("block");
 const hole = document.getElementById("hole");
 const character = document.getElementById("character");
@@ -10,7 +9,6 @@ const gameOverScreen = document.getElementById("gameover");
 const finalScore = document.getElementById("finalScore");
 
 
-// GAME STATE
 let jumping = false;
 let score = 0;
 let level = 1;
@@ -18,7 +16,6 @@ let speed = 2;
 let gameStarted = false;
 
 
-// START GAME
 function startGame() {
 
     let timeLeft = 3;
@@ -40,7 +37,6 @@ function startGame() {
 }
 
 
-// SPACEBAR CONTROL
 document.addEventListener("keydown", (e) => {
 
     if (e.code === "Space") {
@@ -50,8 +46,6 @@ document.addEventListener("keydown", (e) => {
 
 });
 
-
-// RANDOMIZE HOLE + SCORE
 hole.addEventListener("animationiteration", () => {
 
     const random = -((Math.random() * 300) + 150);
@@ -65,8 +59,6 @@ hole.addEventListener("animationiteration", () => {
 
 });
 
-
-// MAIN GAME LOOP
 setInterval(() => {
 
     if (!gameStarted) return;
@@ -95,8 +87,6 @@ setInterval(() => {
 
 }, 10);
 
-
-// JUMP FUNCTION
 function jump() {
 
     jumping = true;
@@ -120,8 +110,6 @@ function jump() {
     }, 10);
 }
 
-
-// LEVEL SYSTEM
 function updateLevel() {
 
     if (score % 10 === 0) {
@@ -136,8 +124,6 @@ function updateLevel() {
 
 }
 
-
-// UPDATE HUD
 function updateHUD() {
 
     scoreDisplay.innerHTML = "Score: " + score;
@@ -145,8 +131,6 @@ function updateHUD() {
 
 }
 
-
-// GAME OVER
 function gameOver() {
 
     gameStarted = false;
@@ -156,8 +140,6 @@ function gameOver() {
     gameOverScreen.style.display = "flex";
 }
 
-
-// RESET GAME
 function resetGame() {
 
     score = 0;
