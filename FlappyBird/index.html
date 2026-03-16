@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Start Splash Screen -->
+    <div id="splash" class="overlay">
+        <div class="menu">
+            <h1>Ready to Play?</h1>
+            <button onclick="startGame()">Start Game</button>
+            <div id="countdown"></div>
+            <p>Press <strong>SPACE</strong> to jump</p>
+        </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameover" class="overlay">
+        <div class="menu">
+            <h1>Game Over</h1>
+            <p id="finalScore"></p>
+            <button onclick="restartGame()">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Game Container -->
+    <main id="game">
+        <div id="block"></div>
+        <div id="hole"></div>
+        <div id="character"></div>
+
+        <!-- HUD -->
+        <div id="hud">
+            <span id="score">Score: 0</span>
+            <span id="level">Level: 1</span>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
